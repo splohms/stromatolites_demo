@@ -41,17 +41,18 @@ for idx,item in enumerate(bib):
     url =[]
 
     #as failsafe, always check if each variable exists
-    if isinstance(item['_gddid'],unicode):
+    # JKW updated 'unicode' to 'str' for Python 3 compatibility
+    if isinstance(item['_gddid'],str):
         docid=item['_gddid'].encode('ascii','ignore')
     else:
         docid=item['_gddid']
 
-    if isinstance(item['title'],unicode):
+    if isinstance(item['title'],str):
         title=item['title'].encode('ascii','ignore')
     else:
         title=item['title']
 
-    if isinstance(item['journal']['name'],unicode):
+    if isinstance(item['journal']['name'],str):
         journal=item['journal']['name'].encode('ascii','ignore')
     else:
         journal=item['journal']['name']
