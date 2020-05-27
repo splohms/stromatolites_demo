@@ -5,6 +5,7 @@
 # ACQUIRE RELEVANT MODULES
 #==============================================================================
 import time, urllib.request, urllib.error, urllib.parse, csv, random, psycopg2, re, yaml
+import pandas as pd
 from psycopg2.extensions import AsIs
 
 #tic

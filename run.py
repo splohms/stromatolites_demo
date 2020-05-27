@@ -63,4 +63,4 @@ os.system('python ./udf/ext_target_adjective.py')
 
 #summary of performance time
 elapsed_time = time.time() - start_time
-print('\n ###########\n\n elapsed time: %d seconds\n\n ###########\n\n') %(elapsed_time)
+print('\n ###########\n\n elapsed time: %d seconds\n\n ###########\n\n' %(elapsed_time))
