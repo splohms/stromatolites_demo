@@ -5,7 +5,10 @@ of stromatolites across Earth history. This application uses a combination of Py
 PostgreSQL, and is the same as used to generate the results for the published manuscript. We also 
 include 5 USGS Technical Reports from the GeoDeepDive database - a subset of the 8,425 
 documents analyzed for the manuscript - to serve as a demonstration of how the application
-operates.
+operates.  
+
+## Note:
+This version here (forked to JuliaWilcots) is compatible with Python3. It uses Pandas instead of urllib for the most part and has updated syntax to reflect new ```print()``` and ```eval()``` methods.
 
 ## Getting started
 Dependencies:
