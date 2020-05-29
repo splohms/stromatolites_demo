@@ -8,13 +8,14 @@ documents analyzed for the manuscript - to serve as a demonstration of how the a
 operates.  
 
 ## Note:
-This version here (forked to JuliaWilcots) is compatible with Python3. It uses Pandas instead of urllib for the most part and has updated syntax to reflect new ```print()``` and ```eval()``` methods.
+This version here (forked to JuliaWilcots) is compatible with Python3. It uses Pandas instead of urllib for the most part and has updated syntax to reflect new ```print()``` and ```eval()``` methods.  
 
 ## Getting started
 Dependencies:
   + [GNU Make](https://www.gnu.org/software/make/)
   + [git](https://git-scm.com/)
-  + [pip](https://pypi.python.org/pypi/pip)
+  + [pip](https://pypi.python.org/pypi/pip)  
+      - If you have an older computer, you might need to use ```python3``` and ```pip3``` instead of python and pip
   + [PostgreSQL](http://www.postgresql.org/)
 
 ### OS X
@@ -38,19 +39,28 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 First, clone this repository and run the setup script:
 
 ````
-git clone https://github.com/UW-Macrostrat/stromatolites_demo
+git clone https://github.com/juliawilcots/stromatolites_demo
 cd stromatolites_demo
 make
 ````
 Note that it is likely that you may have to issue a sudo with the make command above.
 
-Edit `credentials` with your username for your local Postgres database.
+Edit `credentials` with your username for your local Postgres database. (For me, this is "JuliaWilcots," the same username that is associated with my computer. You can keep the password ```password123``` if you would like.
 
 To create the database needed to run this demonstration, type:
 
 ````
 make local_setup
 ````
+This runs the script ```setup/setup.sh``` and sets up the databases in which we'll store found stromatolites. At this point, you should see something like:
+
+```
+CREATE TABLE
+CREATE INDEX
+CREATE INDEX
+COPY 14560
+```
+Then, you're ready to run the demo! As run.py progresses, you will see updates in your terminal window about what the script is doing.  
 
 To run the demonstration, type:
 
